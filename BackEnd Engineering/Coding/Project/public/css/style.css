@@ -1,0 +1,34 @@
+.st-font{
+    font-family: 'satisfy',cursive;
+}
+html,body{
+    height:100%;
+}
+.container-fluid{
+    min-height: 100%;
+    background-size:cover ;
+}
+
+.i-color {
+    color:chartreuse;
+}
+
+.ss-color {
+    color: silver;
+}
+ 
+a.nav-link{
+    color: whitesmoke;
+}
+
+a.nav-link:hover{
+    color: black;
+    background-color: #e9cd79;
+}
+
+a.nav-link.active {
+    color: black;
+    background-color: #ffc107;
+    font-weight: bold;
+}
+

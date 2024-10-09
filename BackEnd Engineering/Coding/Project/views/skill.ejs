@@ -1,0 +1,83 @@
+<%- include('./partials/header.ejs') %>
+<div class="container-fluid bg-dark">
+  <div class="row">
+    <div class="col-sm-2">
+      <%- include('./partials/sidebar.ejs',{page_name:'skill'}) %>
+      <div class="col-sm-10">
+        <!---Body-->
+        <div class="row">
+            <div class="mt-5 text-white  text-center">
+                <h1 class="fw-bold st-font">My Skills</h1>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="mt-5 text-white mx-5 text-justify">
+              <h1 class="fw-bold st-font">Python</h1>
+            </div>
+
+            <div
+              class="progress-bar bg-warning progress-bar-animated rounded mx-5"
+              role="progressbar"
+              style="width: 70%"
+              aria-valuenow="70"
+              aria-valuemin="0"
+              aria-valuemax="100">
+              PYTHON --- 70%
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="mt-5 text-white mx-5 text-justify">
+              <h1 class="fw-bold st-font">C++</h1>
+            </div>
+
+            <div
+              class="progress-bar bg-info progress-bar-animated rounded mx-5"
+              role="progressbar"
+              style="width: 90%"
+              aria-valuenow="90"
+              aria-valuemin="0"
+              aria-valuemax="100">
+              C++ --- 90%
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="mt-5 text-white mx-5 text-justify">
+              <h1 class="fw-bold st-font">React</h1>
+            </div>
+            <div
+              class="progress-bar bg-success progress-bar-animated rounded mx-5"
+              role="progressbar"
+              style="width: 75%"
+              aria-valuenow="75"
+              aria-valuemin="0"
+              aria-valuemax="100">
+              React --- 75%
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="mt-5 text-white mx-5 text-justify">
+              <h1 class="fw-bold st-font">C</h1>
+            </div>
+            <div
+              class="progress-bar bg-danger progress-bar-animated rounded mx-5"
+              role="progressbar"
+              style="width: 60%"
+              aria-valuenow="60"
+              aria-valuemin="0"
+              aria-valuemax="100">
+              C --- 60%
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+  </div>
+</div>

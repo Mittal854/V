@@ -1,0 +1,632 @@
+source code -----------> byte code ----------> machine code
+.java       complier     .class       J.V.M.
+
+
+JDK--Developers Kit
+ |----> JRE--libraries & ToolKit
+         |----> JVM--runs java programs
+
+
+*boolean   | 1 bit     |  Primitive     | true or false
+ byte      | 1 byte    |  Primitive     | -128 to 127
+ short     | 2 bytes   |  Primitive     | -32,768 to 32,767
+*int       | 4 bytes   |  Primitive     | -2,147,483,648 to 2,147,483,647
+ long      | 8 bytes   |  Primitive     | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+ float     | 4 bytes   |  Primitive     | fractional numbers upto 6-7 digits
+*double    | 8 bytes   |  Primitive     | fractional numbers upto 15 digits
+*char      | 2 bytes   |  Primitive     | single character/letter or ASCII value
+*String    | varies    |  Reference     | a sequence of characters
+
+
+Primitive
+ |---->8 types
+ |---->stores data
+ |---->can only hold 1 value
+ |---->less memory
+ |---->fast
+
+Reference
+ |---->unlimited (user defined)
+ |---->stores address of data
+ |---->can hold multiple values
+ |---->more memory
+ |---->slow
+
+
+Math class
+ |---->Math.max(a,b)
+ |---->Math.min(a,b)
+ |---->Math.abs(a)
+ |---->Math.sqrt(a)
+ |---->Math.round(a)    //rounds off to nearest integer
+ |---->Math.ceil(a)     //rounds off to next integer
+ |---->Math.floor(a)    //rounds off to previous integer
+ |---->Math.pow(a,b)
+
+
+Random class
+ |---->Random rand = new Random();
+ |---->rand.nextInt()       //generates random number
+ |---->rand.nextInt(10)    //generates random number between 0 to 9
+ |---->rand.nextInt(10)+1  //generates random number between 1 to 10
+ |---->rand.nextDouble()    //generates random number between 0.0 to 1.0
+ |---->rand.nextBoolean()   //generates random boolean value
+ |---->rand.nextFloat()     //generates random float value
+ |---->rand.nextLong()      //generates random long value
+
+
+Logical Operator -- used to connect two or more expressions
+ |---->&&
+ |---->||
+ |---->!
+
+
+Strings
+ |---->String str = "Hello";
+ |---->str.length()
+ |---->str.charAt(0)
+ |---->str.substring(0,3)
+ |---->str.indexOf("l")
+ |---->str.lastIndexOf("l")
+ |---->str.equals("Hello")
+ |---->str.equalsIgnoreCase("hello")
+ |---->str.compareTo("Hello")
+ |---->str.compareToIgnoreCase("hello")
+ |---->str.isEmpty()
+ |---->str.toUpperCase()
+ |---->str.toLowerCase()
+ |---->str.trim()
+ |---->str.replace("H","J")
+
+
+Wrapper Class -- used to convert primitive data types into reference data types
+ |---->Boolean
+ |---->Character
+ |---->Integer
+ |---->Double
+They have access to useful methods
+
+Autoboxing -- the automatic conversion that the Java compiler makes between the primitive types and their corresponding object wrapper classes
+ |---->int a = 10;
+ |---->Integer b = a;
+ |---->Boolean a=true;
+ |---->Character b='a';
+
+Unboxing -- the reverse of autoboxing. Automatic conversion of wrapper class to primitive.
+ |---->Integer a = new Integer(10);
+ |---->int b = a.intValue();
+ |---->Boolean a = new Boolean(true);
+ |---->boolean b = a.booleanValue();
+ |---->if(b==true)  //no need to write if(b.booleanValue()==true)
+
+Wrapper class takes more steps to access the value than primitive data type. So, use primitive data type whenever possible.
+
+
+ArrayList
+ |----> Resizable array
+ |---->Stores Reference data types
+ |---->ArrayList<String> list = new ArrayList<String>();
+ |---->list.add("Hello");
+ |---->list.get(0)
+ |---->list.set(0,"Hi")
+ |---->list.remove(0)
+ |---->list.size()
+ |---->list.clear()
+
+2D ArrayList
+ |---->ArrayList<ArrayList<Integer>> list = new ArrayList<ArrayList<Integer>>();
+ |---->list.add(new ArrayList<Integer>());
+ |---->list.get(0).add(10);
+ |---->list.get(0).get(0)
+ |---->list.get(0)
+
+For Each loop
+ |---->for(String i : list)
+ |---->for(int i : list.get(0))
+
+Methods -- block of code performing certain task.
+
+Overloaded methods -- methods with same name but different parameters.
+ |---->Method Signature -- method name + parameters   
+ |---->public void display()
+ |---->public void display(int a)
+ |---->public void display(int a, int b)
+
+printf() -- an optional method to control, format, and display text to the console window.
+ |---->two arguments -- format string + (object/variable/value)
+ |---->%[flags][precision][width][conversion-character]
+ |---->boolean -- %b
+ |---->char -- %c
+ |---->int -- %d
+ |---->float -- %f
+ |---->String -- %s
+ |---->double -- %f
+ |---->System.out.printf("%d is the value",123);
+ |---->[width] -- minimum number of characters to be written as output
+ |---->[precision] -- sets number of digits of precision when outputting floating-point values
+ |---->[flags] -- adds an effect to output based on the flag added to format specifier
+ |----> - -- left-justify
+ |----> + -- output a plus (+) or minus (-) sign for a numeric value
+ |----> 0 -- numeric values are zero-padded
+ |----> , -- comma grouping separator if numbers > 1000
+ |---->System.out.printf("%-10d%-10d%-10d",123,456,789);
+
+Final keyword -- used to restrict the user. Final class cannot be inherited, final method cannot be overridden, final variable cannot be changed.
+ |---->final int a = 10;
+ |---->final void display()
+ |---->final class A    //cannot be inherited
+
+ 
+OOPS
+ |---->Object Oriented Programming System
+ |---->Object -- instance of class
+ |---->Class -- blueprint of object
+
+Constructor -- special type of method that is used to initialize the object.
+ |---->same name as class
+ |---->no return type
+ |---->public class A
+ |---->{
+ |---->    public A()
+ |---->    {
+ |---->        System.out.println("Constructor called");
+ |---->    }
+ |---->}
+ |---->A obj = new A();
+
+Types of Constructor
+ |---->Default Constructor -- no parameters
+ |---->Parameterized Constructor -- with parameters
+ |---->Copy Constructor -- copies the values of one object to another object
+
+Variable Scope
+ |---->Local Variable --declared inside a method visible only to that method
+ |---->Global Variable -- declared outside a method visible to all methods of class
+
+Overloaded Constructor -- constructor with same name but different parameters
+ |---->public class A
+ |---->{
+ |---->    public A()
+ |---->    {
+ |---->        System.out.println("Constructor called");
+ |---->    }
+ |---->    public A(int a)
+ |---->    {
+ |---->        System.out.println("Constructor called with parameter");
+ |---->    }
+ |---->}
+ |---->A obj = new A();
+ |---->A obj1 = new A(10);
+
+toString() -- special method that all objects inherit, that returns a string that "textually represents" an object. Can be used both implicitly and explicitly.
+ |---->public String toString()
+ |---->{
+ |---->    return "Hello";
+ |---->}
+ |---->System.out.println(obj);   //Hello      implicit
+ |---->System.out.println(obj.toString());   //Hello            explicit
+
+Static keyword -- modifier. A single copy of variable/method is created & shared. The class "owns" the static member.
+ |---->public static int a = 10;
+ |---->public static void display()
+ |---->{
+ |---->    System.out.println("Static method");
+ |---->}
+ |---->A obj = new A();
+ |---->obj.a;
+ |---->obj.display();
+ |---->A.a;
+ |---->A.display();
+
+Inheritance -- the process where one class acquires the attributes and methods of another.
+ |---->class A extends B
+ |---->{
+ |---->}
+ |---->class B
+ |---->{
+ |---->}
+ |---->A obj = new A();
+ |---->obj.method();
+ |---->obj.method1();
+ |---->obj.method2();
+ |---->obj.method3();
+
+Method Overriding -- declaring a method in sub class, which is already present in parent class.Done so that a child class can have its own implementation.
+ |---->class A
+ |---->{
+ |---->    public void display()
+ |---->    {
+ |---->        System.out.println("Parent class");
+ |---->    }
+ |---->}
+ |---->class B extends A
+ |---->{
+ |---->    public void display()
+ |---->    {
+ |---->        System.out.println("Child class");
+ |---->    }
+ |---->}
+ |---->A obj = new B();
+ |---->obj.display();
+
+Super -- refers to the superclass (parent) of an object. Used to call the constructor of parent class.
+ |---->super.display();
+ |---->super();
+
+Abstract -- abstract class cannot be instantiated, but they can have subclasses. Abstract methods are declared without an implementation.
+ |---->abstract class A
+ |---->{
+ |---->    abstract void display();
+ |---->}
+ |---->class B extends A
+ |---->{
+ |---->    void display()
+ |---->    {
+ |---->        System.out.println("Abstract method");
+ |---->    }
+ |---->}
+ |---->A obj = new B();
+ |---->obj.display();
+
+Access Modifiers
+ 
+Modifier    | Class | Package | Subclass | World
+-----------------------------------------------
+public      |  Y    |    Y    |    Y     |   Y
+protected   |  Y    |    Y    |    Y     |   N
+default     |  Y    |    Y    |    N     |   N
+private     |  Y    |    N    |    N     |   N
+
+ |---->public -- accessible from everywhere
+ |---->protected -- accessible within package and outside package through inheritance
+ |---->default -- accessible within package
+ |---->private -- accessible within class
+  
+
+Encapsulation -- attributes of a class will be hidden or private, Can be accessed only through methods (getters & setters).You should make attributes private if you don't have reason to make them public/protected.
+ |---->private String name;
+ |---->public String getName()
+ |---->{
+ |---->    return name;
+ |---->}
+ |---->public void setName(String name)
+ |---->{
+ |---->    this.name = name;
+ |---->}
+
+Copy Objects --  Creates the copy of object but point to different memory location.
+ |---->Car car1=new Car();
+ |---->Car car2=new Car();
+ |---->car1=car2;    //this will make both cars same as they point to same memory location
+ |---->car2.copy(car1)   //this will make car2 same as car1 but point to different memory location
+ |---->we have to create a copy function which will copy the values of one object to another object
+
+Interface -- A template that can be applied to a class. Similar to inheritance, but specifies what a class has/must do. Classes can apply more than one interface, inheritance is limited to one superclass.
+ |---->interface A
+ |---->{
+ |---->    void display();
+ |---->}
+ |---->class B implements A
+ |---->{
+ |---->    public void display()
+ |---->    {
+ |---->        System.out.println("Interface");
+ |---->    }
+ |---->}
+ |---->A obj = new B();
+ |---->obj.display();
+
+Polymorphism -- greek word for poly-"many", morph-"form". The ability pf an object to identify as more than one type.
+ |---->class vehicle
+ |---->{
+ |---->    void display();
+ |---->}
+ |---->class car extends vehicle
+ |---->{
+ |---->    void display()
+ |---->    {
+ |---->        System.out.println("Car");
+ |---->    }
+ |---->}
+ |---->class bike extends vehicle
+ |---->{
+ |---->    void display()
+ |---->    {
+ |---->        System.out.println("Bike");
+ |---->    }
+ |---->}
+ |---->car car1=new car();
+ |---->bike bike1=new bike();
+ |---->vehicle[] v={car1,bike1};    //polymorphism as both car and bike has vehicle in common so to store them in same array we use vehicle
+ |---->for(vehicle i:v)
+ |---->{
+ |---->    i.display();             //Since display is overridden in both car and bike, it will call the respective display method
+ |---->}
+
+Dynamic Polymorphism -- create the instance of subclass at runtime by first initializing the superclass.
+ |---->class A
+ |---->{
+ |---->    void display()
+ |---->    {
+ |---->        System.out.println("Parent class");
+ |---->    }
+ |---->}
+ |---->class B extends A
+ |---->{
+ |---->    void display()
+ |---->    {
+ |---->        System.out.println("Child class");
+ |---->    }
+ |---->}
+ |---->A a;
+ |---->if(choice==1)
+ |---->{
+ |---->    a=new B();
+ |---->    a.display();
+ |---->}
+ |---->else
+ |---->{
+ |---->    a=new A();
+ |---->    a.display();
+ |---->}
+
+Exceptions -- an event that occurs during the execution of a program that disrupts the normal flow of instructions.
+ |---->try
+ |---->{
+ |---->    //code that may throw exception
+ |---->}
+ |---->catch(Exception e)
+ |---->{
+ |---->    //code to handle exception
+ |---->}
+ |---->finally
+ |---->{
+ |---->    //code that will execute whether exception is handled or not
+ |---->}
+ |---->throw -- used to throw an exception
+ |---->throws -- used to declare an exception
+ |---->Exception -- parent class of all exceptions
+ |---->ArithmeticException
+ |---->ArrayIndexOutOfBoundsException
+ |---->FileNotFoundException
+ |---->IOException
+ |---->NullPointerException
+ |---->NumberFormatException
+ |---->RuntimeException
+
+Generics -- enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods.
+ |---->A benefit is to eliminate the need to create multiple versions of methods or classes for various data types.
+ |---->Use 1 version for all reference data types.
+ |---->public static <T> void display(T[] arr)
+ |---->{
+ |---->    for(T i:arr)
+ |---->    {
+ |---->        System.out.println(i);
+ |---->    }
+ |---->}
+ |---->public static <T> T displayFirst(T a)
+ |---->{
+ |---->    return a[0];
+ |---->}
+ |---->display(new Integer[]{1,2,3});
+ |---->display(new String[]{"Hello","World"});
+ |---->display(new Double[]{1.1,2.2,3.3});
+ |---->displayFirst(new Integer[]{1,2,3});
+ |---->displayFirst(new String[]{"Hello","World"});
+ |---->displayFirst(new Double[]{1.1,2.2,3.3});
+ |---->Generic Classes
+ |---->public class MyGen<T>
+ |---->{
+ |---->    T obj;
+ |---->    MyGen(T obj)
+ |---->    {
+ |---->        this.obj=obj;
+ |---->    }
+ |---->    T getObj()
+ |---->    {
+ |---->    return obj;
+ |---->    }
+ |---->}
+ |---->MyGen<Integer> m = new MyGen<>(10);
+ |---->MyGen<String> m1 = new MyGen<>("Hello");
+ |---->System.out.println(m.getObj());
+ |---->System.out.println(m1.getObj());
+
+Bounded Types -- you can create the objects of a genric class to have data of specific derived types eg. Numbers
+ |---->public class MyGen<T extends Number>
+ |---->{
+ |---->    T obj;
+ |---->    MyGen(T obj)
+ |---->    {
+ |---->        this.obj=obj;
+ |---->    }
+ |---->    T getObj()
+ |---->    {
+ |---->    return obj;
+ |---->    }
+ |---->}
+ |---->MyGen<Integer> m = new MyGen<>(10);
+ |---->MyGen<Double> m1 = new MyGen<>(10.5);
+ |---->System.out.println(m.getObj());
+ |---->System.out.println(m1.getObj());
+ |---->MyGen<String> m2 = new MyGen<>("Hello");    //error as String is not a subclass of Number
+
+Serialization -- The process of converting an object into a byte stream. Persists (save the state) the object after program exits. This byte stream can be saved as a file or sent over a network. Can be sent to a different machine.Byte stream can be saved as file(.ser) which is platform independent.
+ |---->Your object class should implement Serializable interface.
+ |---->add import java.io.Serializable;
+ |---->FileOutputStream file = new FileOutputStream("file.ser");
+ |---->ObjectOutputStream out = new ObjectOutputStream(file);
+ |---->out.writeObject(obj);
+ |---->out.close();
+ |---->file.close();
+ |---->public class User implements Serializable
+ |---->{
+ |---->    String name;
+ |---->    int id;
+ |---->    User(String name, int id)
+ |---->    {
+ |---->        this.name=name;
+ |---->        this.id=id;
+ |---->    }
+ |---->}
+ |---->User
+ |---->{
+ |---->    public static void main(String[] args)
+ |---->    {
+ |---->        User obj = new User("Hello",1);
+ |---->        try
+ |---->        {
+ |---->            FileOutputStream file = new FileOutputStream("file.ser");
+ |---->            ObjectOutputStream out = new ObjectOutputStream(file);
+ |---->            out.writeObject(obj);
+ |---->            out.close();
+ |---->            file.close();
+ |---->        }
+ |---->        catch(IOException e)
+ |---->        {
+ |---->            System.out.println("Exception caught");
+ |---->        }
+ |---->    }
+ |---->}
+
+Deserialization -- The reverse process of converting a byte stream into an object.
+ |---->Declare your object (don't initialize it).
+ |---->Your class should implement Serializable interface.
+ |---->add import java.io.Serializable;
+ |---->FileInputStream file = new FileInputStream("file.ser");
+ |---->ObjectInputStream in = new ObjectInputStream(file);
+ |---->obj = (User)in.readObject();
+ |---->in.close();
+ |---->file.close();
+ |---->public class User implements Serializable
+ |---->{
+ |---->    String name;
+ |---->    int id;
+ |---->    User(String name, int id)
+ |---->    {
+ |---->        this.name=name;
+ |---->        this.id=id;
+ |---->    }
+ |---->}
+ |---->User
+ |---->{
+ |---->    public static void main(String[] args)
+ |---->    {
+ |---->        User obj = null;
+ |---->        try
+ |---->        {
+ |---->            FileInputStream file = new FileInputStream("file.ser");
+ |---->            ObjectInputStream in = new ObjectInputStream(file);
+ |---->            obj = (User)in.readObject();
+ |---->            in.close();
+ |---->            file.close();
+ |---->        }
+ |---->        catch(IOException e)
+ |---->        {
+ |---->            System.out.println("Exception caught");
+ |---->        }
+ |---->        catch(ClassNotFoundException e)
+ |---->        {
+ |---->            System.out.println("Class not found");
+ |---->        }
+ |---->        System.out.println("Name: "+obj.name);
+ |---->        System.out.println("Id: "+obj.id);
+ |---->    }
+ |---->}
+
+Timer -- A faculity for threads to schedule tasks for future execution in a background thread.
+TimerTask -- A task that can be scheduled for one-time or repeated execution by a Timer.      
+ |---->Timer timer = new Timer();
+ |---->TimerTask task = new TimerTask()
+ |---->{
+ |---->    public void run()
+ |---->    {
+ |---->        System.out.println("Task performed on: "+new Date());
+ |---->    }
+ |---->};
+ |---->timer.schedule(task, 3000);
+ |---->timer.schedule(task,date.getTime());
+ |---->timer.scheduleAtFixedRate(task, date.getTime(), 1000);
+
+Thread -- A thread of execution in a program. The JVM allows an application to have multiple threads running concurrently. Each thread can execute parts of your code in parallel with the main thread.Each thread has a priority. Threads with higher priority are executed in preference to threads with lower priority.
+ |---->The JVM continues to execute threads until either of the following occurs:
+        |---->The exit method of class Runtime has been called and the security manager has permitted the exit operation to take place.
+        |---->All threads that are not daemon threads have died.
+ |---->When JVM starts up, there is a thread which calls the main method (main thread). The main thread creates child threads.
+ |---->Daemon thread is a low priority thread that runs in background to perform tasks such as garbage collection.
+ |---->JVM terminates itself when all user threads (non-daemon threads) finish their execution.
+ |---->Thread.activeCount() -- returns the number of active threads in the current thread's thread group.
+ |---->Thread.currentThread() -- returns a reference to the currently executing thread object.
+ |---->Thread.currentThread().getName() -- returns the name of the current thread.
+ |---->Thread.currentThread().setName("Thread1") -- sets the name of the current thread.
+ |---->Thread.currentThread().getPriority() -- returns the priority of the current thread.
+ |---->Thread.currentThread().setPriority(10) -- sets the priority of the current thread.
+ |---->Thread.currentThread().isAlive() -- tests if this thread is alive.
+ |---->Thread.sleep(1000) -- causes the currently executing thread to sleep (temporarily cease execution) for the specified number of milliseconds.
+ |---->Thread.currentThread.isDaemon() -- tests if this thread is a daemon thread.
+ |---->Thread.currentThread().setDaemon(true) -- marks this thread as either a daemon thread or a user thread.
+ |---->Thread.currentThread().join() -- waits for this thread to die.
+ |---->public class A extends Thread
+ |---->{
+ |---->    public void run()
+ |---->    {
+ |---->        System.out.println("Thread is running");
+ |---->    }
+ |---->}
+ |---->A obj = new A();
+ |---->obj.run();
+ |---->obj.isAlive();  //return false as thread is not started
+ |---->obj.start();
+ |---->obj.isAlive();  //return true as thread is started
+
+MultiThreading -- Process of executing multiple threads simultaneously.
+ |---->Helps maximum utilisation of CPU.
+ |---->Threads are independent, they don't affect the execution of other threads.
+ |---->An exception in one thread will not interrupt other threads useful for serving multiple clients, multiplayer games, or other mutually independent tasks.
+ |---->public class A extends Thread
+ |---->{
+ |---->    public void run()
+ |---->    {
+ |---->        for(int i=0;i<5;i++)
+ |---->        {
+ |---->            System.out.println(Thread.currentThread().getName()+" "+i);
+ |---->            try
+ |---->            {
+ |---->                Thread.sleep(1000);
+ |---->            }
+ |---->            catch(InterruptedException e)
+ |---->            {
+ |---->                System.out.println(e);
+ |---->            }
+ |---->        }
+ |---->    }
+ |---->}
+ |---->public class B extends Runnable
+ |---->{
+ |---->    public void run()
+ |---->    {
+ |---->        for(int i=0;i<5;i++)
+ |---->        {
+ |---->            System.out.println(Thread.currentThread().getName()+" "+i);
+ |---->            try
+ |---->            {
+ |---->                Thread.sleep(1000);
+ |---->            }
+ |---->            catch(InterruptedException e)
+ |---->            {
+ |---->                System.out.println(e);
+ |---->            }
+ |---->        }
+ |---->    }
+ |---->}
+ |---->A obj = new A();
+ |---->B obj1 = new B();
+ |---->Thread C = new Thread(obj1);
+ |---->obj.start();
+ |---->C.start();
+
+Package -- a namespace that organizes a set of related classes and interfaces. Conceptually you can think of packages as being similar to different folders on your computer. You might keep HTML pages in one folder, images in another, and scripts or applications in yet another. Because software written in the Java programming language can be composed of hundreds or thousands of individual classes, it makes sense to keep things organized by placing related classes and interfaces into packages.
+ |---->package com.example;
+ |---->import com.example.A;
+
+

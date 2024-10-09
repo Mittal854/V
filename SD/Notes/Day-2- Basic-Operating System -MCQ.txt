@@ -1,0 +1,79 @@
+Which of the following is NOT a function of an operating system?
+
+A) Managing hardware resources
+B) Providing user interfaces
+C) Running applications
+D) Compiling source code
+Answer: D) Compiling source code
+
+What does the acronym "OS" stand for in computing?
+
+A) Open Software
+B) Operating System
+C) Optimal System
+D) Online Service
+Answer: B) Operating System
+
+Which of the following is a type of operating system?
+
+A) Real-time
+B) Cloud-based
+C) Database management system
+D) File system
+Answer: A) Real-time
+
+What is the primary role of the kernel in an operating system?
+
+A) Provide a user interface
+B) Manage system resources
+C) Connect to the internet
+D) Execute application software
+Answer: B) Manage system resources
+
+In an operating system, what is a 'process'?
+
+A) A program in execution
+B) A system file
+C) A user account
+D) A hardware component
+Answer: A) A program in execution
+
+Which scheduling algorithm allocates CPU time to processes based on their priority?
+
+A) First-Come, First-Served (FCFS)
+B) Shortest Job First (SJF)
+C) Round Robin (RR)
+D) Priority Scheduling
+Answer: D) Priority Scheduling
+
+What is 'virtual memory' in the context of an operating system?
+
+A) A type of physical storage
+B) A technique to increase available memory by using disk space
+C) A memory chip in the computer
+D) A component of the CPU
+Answer: B) A technique to increase available memory by using disk space
+
+Which component of the operating system is responsible for handling input and output operations?
+
+A) File System
+B) Device Drivers
+C) User Interface
+D) Memory Manager
+Answer: B) Device Drivers
+
+Which of the following is an example of a multitasking operating system?
+
+A) DOS
+B) Windows 10
+C) Windows 3.1
+D) Mac OS 9
+Answer: B) Windows 10
+
+What does 'GUI' stand for in the context of operating systems?
+
+A) Graphical User Interface
+B) General User Interface
+C) Graphical User Input
+D) General User Input
+Answer: A) Graphical User Interface
