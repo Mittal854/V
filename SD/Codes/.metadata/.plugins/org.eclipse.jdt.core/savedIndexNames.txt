@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+E:\Chitkara University\V\SD\Codes\.metadata\.plugins\org.eclipse.jdt.core
-2506192191.index
-3803894794.index
-1865797976.index
