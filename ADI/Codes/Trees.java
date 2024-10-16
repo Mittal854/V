@@ -63,7 +63,7 @@ class Trees {
                     q.add(null);
                 }
             } else {
-                System.out.print(temp.data+" ");
+                System.out.print(temp.data + " ");
                 if (temp.left != null) {
                     q.add(temp.left);
                 }
@@ -74,35 +74,64 @@ class Trees {
         }
     }
 
-    public void preorder(Node root)
-    {
-        if(root==null)
-        {
+    public void preorder(Node root) {
+        if (root == null) {
             return;
         }
 
-        System.out.print(root.data+" ");
+        System.out.print(root.data + " ");
         preorder(root.left);
         preorder(root.right);
     }
-    public void inorder(Node root)
-    {
-        if(root==null) return;
+
+    public void inorder(Node root) {
+        if (root == null) {
+            return;
+        }
         inorder(root.left);
-        System.out.print(root.data+" ");
+        System.out.print(root.data + " ");
         inorder(root.right);
     }
-    public void postorder(Node root)
-    {
-        if(root==null) return;
+
+    public void postorder(Node root) {
+        if (root == null) {
+            return;
+        }
         postorder(root.left);
         postorder(root.right);
-        System.out.print(root.data+" ");
+        System.out.print(root.data + " ");
+    }
+
+    public int height(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        int left = height(root.left);
+        int right = height(root.right);
+        int ans = Math.max(left, right) + 1;
+        return ans;
+    }
+
+    public boolean isBalanced(Node root) {
+        if (root == null) {
+            return true;
+        }
+
+        int leftH = height(root.left);
+        int rightH = height(root.right);
+        if (Math.abs(leftH - rightH) > 1) {
+            return false;
+        }
+
+        boolean left = isBalanced(root.left);
+        boolean right = isBalanced(root.right);
+
+        return left && right;
     }
 
     public static void main(String[] args) {
-        Trees t=new Trees();
-        Node root=t.createTree();
+        Trees t = new Trees();
+        Node root = t.createTree();
         t.levelOrder(root);
         System.out.println();
         t.preorder(root);
@@ -110,8 +139,10 @@ class Trees {
         t.postorder(root);
         System.out.println();
         t.inorder(root);
-        
+        System.out.println();
+        System.out.println("Height of tree: "+t.height(root));
+        System.out.println("Balanced tree "+ t.isBalanced(root));
+
     }
-    
 
 }
