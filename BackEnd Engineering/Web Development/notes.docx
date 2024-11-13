@@ -1,0 +1,104 @@
+Web Development
+
+Web -- Is a type of system in which docs resources are interconnected and accessed via the internet.
+Development -- Process of creating or building
+
+Web Development
+    |--- Websites
+        |--- Static content
+        |--- Read only
+    |--- Web Applications
+        |--- Dynamic content
+        |--- Interactive
+
+Web Applications
+    |--- Frontend/UI 
+        |--- User Interface 
+    |--- Backend
+        |--- Brain of Web app
+    |--- DB Layer
+        |--- Data storage
+
+Full Stack Developer
+    |--- Frontend
+    |--- Backend
+    |--- DB Layer
+
+MERN Stack
+    |--- MongoDB
+    |--- Express
+    |--- React
+    |--- Nodejs
+
+Network --  A system where multiple resources are connected together.
+    |--- LAN -- Local Area Network
+    |--- MAN -- Metropolitan Area Network
+    |--- WAN -- Wide Area Network
+
+Internet -- A network of networks. Global system.
+
+WWWW -- World Wide Web
+    |--- Interconnected document and resources.
+    |--- Accessible via internet.
+    |--- SubSet of Internet.
+
+IP Address -- Address of a device on network to communicate.
+
+Browser -- Software to access the internet.
+
+Browser Engine -- Software to render the content of the web page.
+
+Client/Server Model
+    |--- Client -- Requesting the data
+        |--- Get
+        |--- Post
+        |--- Put
+        |--- Delete
+    |--- Server -- Providing the data
+        |--- OutPut
+
+HTML -- Hyper Text Markup Language
+    |--- Structure of Web Page
+    |--- Content of Web Page
+
+CSS -- Cascading Style Sheets
+    |--- Design of Web Page
+    |--- Presentation of Web Page
+
+JS -- JavaScript
+    |--- Behavior of Web Page
+    |--- Interactivity of Web Page
+
+HTML Tags -- a special markup entity through which we can provide structure, meaning/semantics, formatting 
+
+Semantic Tags 
+    |--- <h1> -> <h6>
+    |--- <p>
+    |--- <a>
+    |--- <ul> <ol>
+    |--- <table> <tr> <td>
+    |--- <img>
+    |--- <form>
+    |--- <input>
+
+Structure Tags
+    |--- <html>
+    |--- <head> <body>
+    |--- <header>
+    |--- <main>
+    |--- <aside>
+    |--- <footer>
+    |--- <article>
+    |--- <section>
+    |--- <nav>
+
+Formatting Tags
+    |--- <b>
+    |--- <i>
+    |--- <u>
+    |--- <s>
+    |--- <strong>
+    |--- <em>
+    |--- <sup> <sub>
+    |--- <pre>
+    |--- <code>

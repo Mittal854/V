@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatting</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="username1()">
+    <center><h1>Chatting</h1></center>
+
+    <div id="start">
+      <h3 id="display"></h3>
+      <div id="messages"></div>
+    </div>
+    <div id="forms" >
+      <input type="text" id="message" placeholder="Enter the message" />
+      <button id="sendbtn">Send</button>
+      <button onclick="clear1()" id="clear">Clear</button>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      let username = "";
+      function username1() {
+        username = prompt("Enter your username");
+        if (username) {
+          document.getElementById("display").innerHTML = `You are: ${username}`;
+        } else {
+          document.getElementById("display").innerHTML = `You are: Anonymous`;
+        }
+      }
+      function clear1() {
+        document.getElementById("message").value = "";
+      }
+      const socket = io();
+      const sendBtn = document.getElementById("sendbtn");
+      const messageInput = document.getElementById("message");
+      const allMessages = document.getElementById("messages");
+
+      socket.on("message", (message) => {
+        const messageDiv = document.createElement("div");
+        messageDiv.classList.add("messagess"); // Add a CSS class for styling
+        messageDiv.innerText = message;
+        allMessages.appendChild(messageDiv);
+      });
+
+      sendBtn.addEventListener("click", (e) => {
+        const message = messageInput.value;
+        if (message.trim()) {
+          const formattedMessage = `${username}: ${message}`;
+          socket.emit("user-message", formattedMessage); // Send formatted message to server
+          messageInput.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>
